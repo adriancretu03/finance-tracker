@@ -17,3 +17,4 @@ factory-boy
 django-template-partials
 plotly
 pandas
+django-import-export

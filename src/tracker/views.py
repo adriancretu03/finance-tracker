@@ -1,3 +1,4 @@
+from curses.ascii import HT
 from django.shortcuts import get_object_or_404, render
 from .models import Transaction
 from django.contrib.auth.decorators import login_required
@@ -7,7 +8,9 @@ from django_htmx.http import retarget
 from django.views.decorators.http import require_http_methods
 from django.core.paginator import Paginator
 from django.conf import settings
-from tracker.charting import plot_income_expenses_bar_chart, plot_category_pie_chart
+from .charting import plot_income_expenses_bar_chart, plot_category_pie_chart
+from .resources import TransactionResource
+from django.http import HttpResponse
 
 
 def index(request):
@@ -137,3 +140,19 @@ def transactions_charts(request):
     if request.htmx:
         return render(request, "tracker/partials/charts-container.html", context)
     return render(request, "tracker/charts.html", context)
+
+
+@login_required
+def transactions_export(request):
+    if request.htmx:
+        return HttpResponse(headers={"HX-Redirect": request.get_full_path()})
+    transaction_filter = TransactionFilter(
+        request.GET,
+        queryset=Transaction.objects.filter(user=request.user).select_related(
+            "category"
+        ),
+    )
+    data = TransactionResource().export(transaction_filter.qs)
+    response = HttpResponse(data.csv)
+    response["Content-Disposition"] = "attachment; filename=transactions.csv"
+    return response

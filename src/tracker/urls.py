@@ -7,6 +7,7 @@ from .views import (
     delete_transaction,
     get_transactions,
     transactions_charts,
+    transactions_export,
 )
 
 
@@ -22,4 +23,5 @@ urlpatterns = [
     ),
     path("get-transactions/", get_transactions, name="get-transactions"),
     path("transactions/charts", transactions_charts, name="transactions-charts"),
+    path("transactions/export", transactions_export, name="transactions-export"),
 ]
