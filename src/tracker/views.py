@@ -3,6 +3,7 @@ from .models import Transaction
 from django.contrib.auth.decorators import login_required
 from .filters import TransactionFilter
 from .forms import TransactionForm
+from django_htmx.http import retarget
 
 
 def index(request):
@@ -40,5 +41,11 @@ def create_transaction(request):
             transaction.save()
             context = {"message": "Transaction was added successfully"}
             return render(request, "tracker/partials/transaction-success.html", context)
+        else:
+            context = {"form": form}
+            response = render(
+                request, "tracker/partials/create-transaction.html", context
+            )
+            return retarget(response, "#transaction-block")
     context = {"form": TransactionForm()}
     return render(request, "tracker/partials/create-transaction.html", context)

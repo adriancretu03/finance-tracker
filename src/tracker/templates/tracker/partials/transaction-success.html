@@ -17,14 +17,14 @@
     <button class="btn btn-success"
         hx-get="{% url "create-transaction" %}"
         hx-target="#transaction-block"
-        hx-push-url="true">
+        hx-push-url="{% url "create-transaction" %}">
         Add another
     </button>
 
     <button class="btn btn-info"
         hx-get="{% url "transactions-list" %}"
         hx-target="#transaction-block"
-        hx-push-url="true">
+        hx-push-url="{% url "transactions-list" %}">
         View transactions
     </button>
   </div>
