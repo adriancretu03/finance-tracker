@@ -15,3 +15,5 @@ pytest
 pytest-django
 factory-boy
 django-template-partials
+plotly
+pandas
