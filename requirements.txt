@@ -14,3 +14,4 @@ django-htmx
 pytest
 pytest-django
 factory-boy
+django-template-partials

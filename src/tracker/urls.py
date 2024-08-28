@@ -5,6 +5,7 @@ from .views import (
     create_transaction,
     update_transaction,
     delete_transaction,
+    get_transactions,
 )
 
 
@@ -18,4 +19,5 @@ urlpatterns = [
     path(
         "transactions/<int:pk>/delete/", delete_transaction, name="delete-transaction"
     ),
+    path("get-transactions/", get_transactions, name="get-transactions"),
 ]

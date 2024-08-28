@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "widget_tweaks",
     "django_filters",
     "django_htmx",
+    "template_partials",
     # "slippers",
     # project apps
     "tracker",
@@ -145,3 +146,5 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
+
+PAGE_SIZE = 5

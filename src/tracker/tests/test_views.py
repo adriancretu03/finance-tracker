@@ -161,7 +161,7 @@ def test_update_transaction_request(user, transaction_dict_params, client):
 
 
 @pytest.mark.django_db
-def test_delete_transaction_request(user, client):
+def test_delete_transaction_request(user, transaction_dict_params, client):
     client.force_login(user)
     assert Transaction.objects.filter(user=user).count() == 1
 
