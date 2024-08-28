@@ -26,22 +26,23 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
-    # "django.contrib.sites",
+    "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # external apps
     # "allauth_ui",
     "allauth",
     "allauth.account",
-    # "allauth.socialaccount",
+    "allauth.socialaccount",
     "django_extensions",
     "widget_tweaks",
+    "django_filters",
     # "slippers",
     # project apps
     "tracker",
 ]
 
-# SITE_ID = 1
+SITE_ID = 1
 
 # ALLAUTH_UI_THEME = "dark"
 

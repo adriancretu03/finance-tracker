@@ -9,3 +9,4 @@ django-extensions
 django-widget-tweaks
 requests
 faker
+django-filter

@@ -1,7 +1,11 @@
 from django.urls import path
-from tracker import views
+from .views import (
+    index,
+    transactions_list,
+)
 
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", index, name="index"),
+    path("transactions/", transactions_list, name="transactions-list"),
 ]
