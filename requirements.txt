@@ -11,3 +11,6 @@ requests
 faker
 django-filter
 django-htmx
+pytest
+pytest-django
+factory-boy

@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.humanize",
     # external apps
     # "allauth_ui",
     "allauth",
