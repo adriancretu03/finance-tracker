@@ -10,3 +10,4 @@ django-widget-tweaks
 requests
 faker
 django-filter
+django-htmx

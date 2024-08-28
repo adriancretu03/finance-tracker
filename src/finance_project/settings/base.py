@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django_extensions",
     "widget_tweaks",
     "django_filters",
+    "django_htmx",
     # "slippers",
     # project apps
     "tracker",
@@ -54,7 +55,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # external apps
     "allauth.account.middleware.AccountMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
 ]
 
 ROOT_URLCONF = "finance_project.urls"
