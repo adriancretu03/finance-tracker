@@ -1,0 +1,11 @@
+Django
+django-allauth[socialaccount]
+django-allauth-ui
+python-decouple
+psycopg[binary]
+dj-database-url
+django-debug-toolbar
+django-extensions
+django-widget-tweaks
+requests
+faker
