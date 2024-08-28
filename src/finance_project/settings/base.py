@@ -133,6 +133,7 @@ STATIC_ROOT = BASE_DIR / "local-cdn"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+AUTH_USER_MODEL = "tracker.User"
 LOGIN_REDIRECT_URL = "index"
 
 AUTHENTICATION_BACKENDS = [
