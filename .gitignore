@@ -3,6 +3,7 @@
 
 src/static/vendors
 migrations
+.vscode
 
 ### Django ###
 *.log
