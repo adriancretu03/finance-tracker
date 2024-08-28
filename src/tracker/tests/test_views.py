@@ -65,7 +65,7 @@ def test_end_date_filter(user_transactions, client):
     client.force_login(user)
 
     end_date_cutoff = datetime.now().date() - timedelta(days=20)
-    GET_params = {"start_date": end_date_cutoff}
+    GET_params = {"end_date": end_date_cutoff}
 
     response = client.get(reverse("transactions-list"), GET_params)
 
