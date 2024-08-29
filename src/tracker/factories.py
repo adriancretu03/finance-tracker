@@ -1,6 +1,8 @@
-import factory
-from .models import Category, Transaction, User
 from datetime import datetime
+
+import factory
+
+from .models import Category, Transaction, User
 
 
 class UserFactory(factory.django.DjangoModelFactory):

@@ -1,4 +1,5 @@
 Django
+djhtml
 django-allauth[socialaccount]
 django-allauth-ui
 python-decouple
@@ -18,3 +19,5 @@ django-template-partials
 plotly
 pandas
 django-import-export
+django-unfold
+django-tailwind[reload]

@@ -1,5 +1,6 @@
-import requests
 from pathlib import Path
+
+import requests
 
 
 def download_to_local(url: str, out_path: Path, parent_mkdir: bool = True):

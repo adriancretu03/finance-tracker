@@ -1,8 +1,10 @@
+from datetime import datetime, timedelta
+
 import pytest
 from django.urls import reverse
-from datetime import datetime, timedelta
-from tracker.models import Category, Transaction
 from pytest_django.asserts import assertTemplateUsed
+
+from tracker.models import Category, Transaction
 
 
 @pytest.mark.django_db

@@ -1,6 +1,7 @@
-from import_export import resources, fields
-from .models import Transaction, Category
+from import_export import fields, resources
 from import_export.widgets import ForeignKeyWidget
+
+from .models import Category, Transaction
 
 
 class TransactionResource(resources.ModelResource):

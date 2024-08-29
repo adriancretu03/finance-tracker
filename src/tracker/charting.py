@@ -1,5 +1,6 @@
 import plotly.express as px
 from django.db.models import Sum
+
 from tracker.models import Category
 
 

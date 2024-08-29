@@ -1,7 +1,9 @@
 import random
-from faker import Faker
+
 from django.core.management import BaseCommand
-from tracker.models import User, Transaction, Category
+from faker import Faker
+
+from tracker.models import Category, Transaction, User
 
 
 class Command(BaseCommand):

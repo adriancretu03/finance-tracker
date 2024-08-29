@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,6 +23,7 @@ ADMIN_USER_EMAIL = config("ADMIN_USER_EMAIL", default=None)
 # Application definition
 
 INSTALLED_APPS = [
+    "unfold",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -41,10 +43,21 @@ INSTALLED_APPS = [
     "django_htmx",
     "template_partials",
     "import_export",
+    "tailwind",
+    "django_browser_reload",
     # "slippers",
     # project apps
     "tracker",
+    "theme",
 ]
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+TAILWIND_APP_NAME = "theme"
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 SITE_ID = 1
 
@@ -124,7 +137,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_BASE_DIR = BASE_DIR / "static"
+STATICFILES_BASE_DIR = BASE_DIR / "theme" / "static"
 STATICFILES_BASE_DIR.mkdir(exist_ok=True, parents=True)
 STATICFILES_VENDOR_DIR = STATICFILES_BASE_DIR / "vendors"
 

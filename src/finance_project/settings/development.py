@@ -1,6 +1,7 @@
-from .base import *
-from decouple import config
 import dj_database_url
+from decouple import config
+
+from .base import *
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -22,6 +23,7 @@ INSTALLED_APPS = [
 ]
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     *MIDDLEWARE,
 ]
 
@@ -35,9 +37,3 @@ DATABASES = {
         conn_health_checks=True,
     )
 }
-
-INTERNAL_IPS = [
-    # ...
-    "127.0.0.1",
-    # ...
-]

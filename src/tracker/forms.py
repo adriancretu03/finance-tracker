@@ -1,5 +1,6 @@
 from django import forms
-from .models import Transaction, Category
+
+from .models import Category, Transaction
 
 
 class TransactionForm(forms.ModelForm):

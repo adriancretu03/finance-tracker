@@ -1,4 +1,5 @@
 import pytest
+
 from tracker.models import Transaction
 
 

@@ -1,15 +1,8 @@
 from django.urls import path
-from .views import (
-    index,
-    transactions_list,
-    create_transaction,
-    update_transaction,
-    delete_transaction,
-    get_transactions,
-    transactions_charts,
-    transactions_export,
-)
 
+from .views import (create_transaction, delete_transaction, get_transactions,
+                    index, transactions_charts, transactions_export,
+                    transactions_list, update_transaction)
 
 urlpatterns = [
     path("", index, name="index"),

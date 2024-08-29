@@ -1,8 +1,9 @@
 import django_filters
+from django import forms
 
 from tracker import querysets
-from .models import Transaction, Category
-from django import forms
+
+from .models import Category, Transaction
 
 
 class TransactionFilter(django_filters.FilterSet):

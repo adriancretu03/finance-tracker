@@ -1,16 +1,14 @@
-from tracker.utils import download_to_local
-
 from typing import Any
+
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
+from tracker.utils import download_to_local
 
 STATICFILES_VENDOR_DIR = getattr(settings, "STATICFILES_VENDOR_DIR")
 
 VENDOR_STATICFILES = {
-    "htmx.js": "https://unpkg.com/htmx.org@2.0.2",
-    "tailwind.js": "https://cdn.tailwindcss.com?plugins=typography",
-    "daisy-ui.css": "https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css",
+    "htmx.min.js": "https://unpkg.com/htmx.org@2.0.2/dist/htmx.min.js",
     "plotly.js": "https://cdn.plot.ly/plotly-2.34.0.min.js",
 }
 
